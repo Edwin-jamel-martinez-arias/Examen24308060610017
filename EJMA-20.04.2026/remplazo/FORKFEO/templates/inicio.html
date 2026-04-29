@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio - PyMongo EJMA{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+            <img src="/static/monito.jpg" class="img-fluid rounded-circle shadow" alt="Monito logo" style="max-width: 250px;">
+        </div>
+
+        <div class="col-md-5">
+            <h3 class="display-6 text-white">Empieza a gestionar tu vida con <span class="text-secondary">Monito</span></h3>
+            <p class="text-secondary mt-3">
+                Donde la vida se vuelve más fácil. Descubre cómo Monito te ayuda a organizarte, 
+                procrastinar menos y ser feliz.
+            </p>
+            <p class="fw-light italic text-muted">Para iniciar sesión o crear una cuenta, usa los botones de la derecha.</p>
+        </div>
+
+        <div class="col-md-3 d-grid gap-3">
+            <a href="{{ url_for('crear_cuenta') }}" class="btn btn-outline-light btn-lg">
+                Crear Cuenta
+            </a>
+            
+            <a href="{{ url_for('registro') }}" class="btn btn-secondary btn-lg">
+                Iniciar Sesión
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

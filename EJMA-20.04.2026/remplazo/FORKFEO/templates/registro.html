@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Iniciar Sesión - PyMongo EJMA{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="mx-auto" style="max-width: 400px;">
+        
+        <h2 class="display-6 text-white mb-1">Iniciar Sesión</h2>
+        <p class="h6 text-secondary opacity-50 mb-4 pb-2 border-bottom border-secondary">
+            Ingresa tus datos básicos para acceder
+        </p>
+        
+        <form action="/registro" method="POST">
+            
+            <div class="mb-3">
+                <label for="nombre" class="h6 text-secondary text-uppercase small opacity-75">Nombre de Usuario</label>
+                <input type="text" id="nombre" name="nombre" class="form-control rounded-pill border-secondary-subtle bg-transparent text-white p-2" placeholder="usuario_ejma">
+            </div>
+
+            <div class="mb-3">
+                <label for="gmail" class="h6 text-secondary text-uppercase small opacity-75">Gmail</label>
+                <input type="email" id="gmail" name="gmail" class="form-control rounded-pill border-secondary-subtle bg-transparent text-white p-2" placeholder="correo@gmail.com">
+            </div>
+
+            <div class="mb-5">
+                <label for="contraseña" class="h6 text-secondary text-uppercase small opacity-75">Contraseña</label>
+                <input type="password" id="contraseña" name="contraseña" class="form-control rounded-pill border-secondary-subtle bg-transparent text-white p-2">
+            </div>
+
+            <button type="submit" class="btn btn-outline-secondary rounded-pill w-100 py-2 h5 border-secondary text-white opacity-75">
+                ACCEDER
+            </button>
+            
+        </form>
+    </div>
+</div>
+{% endblock %}

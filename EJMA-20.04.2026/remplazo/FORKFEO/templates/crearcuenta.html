@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}PyMongo EJMA - Crear Cuenta{% endblock %}
+
+{% block content %}
+<div class="mt-5">
+    <div>
+        <h1 class="display-4 text-white">Crear Cuenta</h1>
+        <p class="h5 text-secondary fw-light">Únete al gestor de tareas cotidianas</p>
+    </div>
+
+    <form action="/crear-cuenta" method="POST" class="row g-4">
+        <div class="col-md-6">
+            <label for="nombre" class="h6 text-secondary text-uppercase">Nombre de usuario</label>
+            <input type="text" class="form-control bg-transparent border-secondary text-white p-2" 
+                   id="nombre" name="nombre" placeholder="Ej: monito_user">
+        </div>
+
+        <div class="col-md-6">
+            <label for="gmail" class="h6 text-secondary text-uppercase">Gmail</label>
+            <input type="email" class="form-control bg-transparent border-secondary text-white p-2" 
+                   id="gmail" name="gmail" placeholder="juanita@gmail.com">
+        </div>
+
+        <div class="col-12">
+            <label for="contraseña" class="h6 text-secondary text-uppercase">Contraseña</label>
+            <input type="password" class="form-control bg-transparent border-secondary text-white p-2" 
+                   id="contraseña" name="contraseña">
+        </div>
+
+        <div class="col-12">
+            <label for="razon" class="h6 text-secondary text-uppercase">Razón de uso</label>
+            <textarea class="form-control bg-transparent border-secondary text-white" 
+                      id="razon" name="razon" rows="2"></textarea>
+            <div class="form-text opacity-50">Dinos por qué quieres empezar a organizar tus tareas.</div>
+        </div>
+
+        <div class="col-12 mt-5">
+            <button type="submit" class="btn btn-outline-secondary h5 px-5 py-2 text-white border-secondary">
+                CREAR CUENTA
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio - Mi Proyecto{% endblock %}
+
+{% block content %}
+
+<div class="nombre d-flex justify-content-end">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Usuario
+    </button>
+    <ul class="dropdown-menu">
+    <li><button class="dropdown-item" type="button">Perfil</button></li>
+    <li><button class="dropdown-item" type="button">Cerrar sesion</button></li>
+    </ul>
+</div>
+<div class="container mt-4 text-white">
+    <h1 class="display-4 text-white">Gestor de Tareas</h1>
+    <p class="h5 text-secondary fw-light mb-4">Organiza tus pendientes del día</p>
+
+    <form class="mb-5">
+        <input type="text" class="form-control mb-2 bg-transparent border-secondary text-white p-2" placeholder="Escribe la tarea">
+        <select class="form-select mb-2 bg-dark border-secondary text-white">
+            <option value="alta" class="bg-dark">Alta</option>
+            <option value="media" class="bg-dark">Media</option>
+            <option value="baja" class="bg-dark">Baja</option>
+        </select>
+        <button type="submit" class="btn btn-outline-secondary text-white px-4">Guardar Tarea</button>
+    </form>
+
+    <div class="accordion border-0" id="lista">
+
+        <div class="accordion-item bg-dark border-secondary">
+            <h2 class="accordion-header">
+                <button class="accordion-button bg-danger text-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#alta">
+                    Urgencia Alta
+                </button>
+            </h2>
+            <div id="alta" class="accordion-collapse collapse show">
+                <div class="accordion-body bg-transparent text-white">
+                    <p>Estudiar para el examen</p>
+                    <button class="btn btn-warning btn-sm">Editar</button>
+                    <button class="btn btn-danger btn-sm">Borrar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item bg-dark border-secondary">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-warning text-dark shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#media">
+                    Urgencia Media
+                </button>
+            </h2>
+            <div id="media" class="accordion-collapse collapse">
+                <div class="accordion-body bg-transparent text-white">
+                    <p>Ir al supermercado</p>
+                    <button class="btn btn-warning btn-sm">Editar</button>
+                    <button class="btn btn-danger btn-sm">Borrar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item bg-dark border-secondary">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-success text-white shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#baja">
+                    Urgencia Baja
+                </button>
+            </h2>
+            <div id="baja" class="accordion-collapse collapse">
+                <div class="accordion-body bg-transparent text-white">
+                    <p>Ver una película</p>
+                    <button class="btn btn-warning btn-sm">Editar</button>
+                    <button class="btn btn-danger btn-sm">Borrar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
